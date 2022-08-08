@@ -1,0 +1,370 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbar__list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+}
+
+.navbar__list__item {
+    margin: 0 8px;
+    position: relative;
+}
+
+.navbar__list__item:hover,
+.navbar__list__item-link:hover,
+.icon__header__link:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar__list__item-link,
+.navbar__list__item {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--while--color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.navbar__nopointer {
+    cursor: text;
+    color: var(--while--color);
+}
+
+.navbar__list__item-link,
+.navbar__list__item,
+.icon__header__link {
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.navbar__list__item__qr:hover .header__qr {
+    display: block;
+}
+
+.navbar__list__item--bold {
+    font-weight: 400;
+}
+
+.navbar__list__item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 16px;
+    border-left: 1px solid #FB9086;
+    top: 50%;
+    right: -9px;
+    transform: translateY(-50%);
+}
+
+.icon__header__link {
+    color: var(--while--color);
+    text-decoration: none;
+}
+
+.header__navbar_icon {
+    font-size: 1.8rem;
+    margin: 0 6px;
+}
+
+/* Header QR */
+.header__qr {
+    width: 186px;
+    background-color: var(--while--color);
+    position: absolute;
+    left: 0;
+    top: 130%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: FadeIn ease-in .5s;
+}
+
+.header__qr ::before {
+    position: absolute;
+    left: 0;
+    top: -12px;
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
+}
+
+.header__qr-apps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qr__img {
+    width: 100%;
+}
+
+.header__qr-apps--gplay {
+    height: 14px;
+    width: 100%;
+}
+
+.header__qr-apps-link:first-child {
+    margin-left: 11px;
+}
+
+.header__qr-apps-link:last-child {
+    margin-right: 11px;
+}
+
+/* Notifytion */
+.navbar__list__item:hover .header__noitify {
+    display: block;
+}
+
+.header__noitify::after {
+    content: "";
+    display: block;
+    height: 20px;
+    position: absolute;
+    top: -14px;
+    right: 0;
+    width: 90px;
+}
+
+.header__noitify::before {
+    content: "";
+    display: block;
+    border: solid;
+    border-width: 20px 26px;
+    border-color: transparent transparent var(--while--color) transparent;
+    position: absolute;
+    right: 0;
+    top: -29px;
+}
+
+
+.header__noitify {
+    position: absolute;
+    width: 404px;
+    right: 0;
+    top: 130%;
+    background-color: var(--while--color);
+    border: 1px solid #D3D3D3;
+    cursor: default;
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotifygrow ease-in 0.25s;
+    display: none;
+    will-change: opacity, transform;
+}
+
+@keyframes headerNotifygrow {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify--header {
+    height: 40px;
+    background-color: var(--while--color);
+}
+
+.header__notify--header h3 {
+    color: var(--gray--colour);
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin-left: 12px;
+}
+
+.header__noitify-list {
+    padding-left: 0;
+}
+
+.header__noitify-item {}
+
+.header__noitify-item:hover {
+    background-color: #f7f7f7;
+}
+
+
+.header__noitify-item--viewed {
+    background-color: rgba(238, 77, 45, 0.1);
+}
+
+.header__noitify-link {
+    width: 100%;
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+
+}
+
+.header__noitify-img {
+    width: 48px;
+    object-fit: cover;
+}
+
+.header__noitify-info {
+    margin-left: 8px;
+}
+
+
+
+.header__noitify-name {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--black--color);
+    font-weight: 400;
+}
+
+.header__noitify-description {
+    display: block;
+    margin-top: 12px;
+    font-size: 1.2rem;
+}
+
+.btn__view {
+    width: 100%;
+    font-size: 14px;
+    padding: 4 px 0;
+    background-color: var(--while--color);
+    border-style: none;
+    font-weight: 300;
+}
+
+/* Authen modal */
+.auth-from {
+    width: 500px;
+}
+
+.auth__forn__container {
+    padding: 0 32px;
+}
+
+.auth-from__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 12px;
+}
+
+.auth-from__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text--color);
+}
+
+.auth-from__switch-btn {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--primary--colour);
+    cursor: pointer;
+}
+
+.auth-from__input {
+    height: 40px;
+    width: 100%;
+    margin-top: 16px;
+    padding-left: 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--border--color);
+    border-radius: 2px;
+    outline: none;
+}
+
+.auth-from__aside {
+    margin-top: 20px;
+    padding: 0 12px;
+}
+
+.auth-from__policy-text {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.auth-from__policy-link {
+    text-decoration: none;
+    color: var(--primary--colour);
+}
+
+.auth-form__controls {
+    display: flex;
+    margin-top: 80px;
+    justify-content: flex-end;
+}
+
+.auth-form__control--back {
+    margin-right: 4px;
+}
+
+.auth-form__social {
+    padding: 12px 36px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.btn--with--icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.auth-form__social--icon {
+    font-size: 2rem;
+}
+
+.auth-form__social--facebook {
+    color: var(--while--color);
+    background-color: #3A5A98;
+}
+
+.auth-form__social--title {
+    margin: 0 32px;
+}
+
+.auth-form__social--google {
+    background-color: var(--while--color);
+    color: #666;
+}
+
+/* Login form */
+.auth-from__help {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.auth-from__help--link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+}
+
+.auth-from__help--sperate {
+    display: block;
+    border-left: 1px solid var(--border--color);
+    height: 22px;
+    margin: 0 12px;
+}
+
+.auth-from__help--forget {
+    color: var(--primary--colour);
+}
